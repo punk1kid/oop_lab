@@ -1,0 +1,7 @@
+<?xml version ="1.0" encoding="UTF-8" standalone="no"?>
+<!--Заголовок документа-->
+<clothinglist> <!--Открывающий тег корневого элемента документа-->
+<!--Два одиночных тега с тремя атрибутами-->
+<clothing type="Футболка" colour="Синий" availability="Да"/>
+<clothing type="Шарф" colour="Красный" availability="Нет"/>
+</clothinglist> <!--Закрывающий тег корневого элемента документа-->

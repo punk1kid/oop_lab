@@ -4,6 +4,7 @@ import java.awt.event.*; //Импорт библиотеки обрабатыв�
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
+
 public class Main {
     //Объявление графических компонентов
     private JFrame adminStore;
@@ -59,7 +60,7 @@ public class Main {
 
         //Создание таблицы с данными
         String[] columns = {"Тип", "Цвет", "Наличие"};
-        String[][] data = {{"Футболка", "Синий", "Да"},{"Шарф", "Красный", "Нет"}};
+        String[][] data = {};
         model = new DefaultTableModel(data,columns);
         clothing = new JTable(model);
         scroll = new JScrollPane(clothing);
@@ -82,13 +83,14 @@ public class Main {
 
         Listeners();
 
+
         //Визуализация экранной формы
         adminStore.setVisible(true);
     }
 
 
     private void Listeners() {
-        Actions buttonActions = new Actions(adminStore, colours, product);
+        Actions buttonActions = new Actions(adminStore, colours, product, model, clothing);
         filter.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent event) {
